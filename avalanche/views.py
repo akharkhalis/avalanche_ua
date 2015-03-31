@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def avalanche_home(request):
+	return render(request, 'avalanche_home.html', {})
