@@ -1,3 +1,4 @@
+from django.conf import global_settings
 """
 Django settings for avalanche_ua project.
 
@@ -36,7 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'avalanche',
+    'avalanche_ua',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -82,3 +83,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+
+PORTAL_URL = 'http://localhost:8001'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, '..', 'media')
+
+TEMPLATE_CONTEXT_PROCESSORS = \
+    global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
+    "django.core.context_processors.request",
+    "avalanche_ua.context_processors.students_proc",
+)

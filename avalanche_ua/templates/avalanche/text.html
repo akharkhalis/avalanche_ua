@@ -1,0 +1,30 @@
+{% extends "avalanche/avalanche_home.html" %}
+{% load static from staticfiles %}
+
+{% block sub_content %}
+    <div id="text_report">
+        <table>
+            <tr id="tab_row">
+                <td id="tab_tab_img"><h4><b>Loose Dry</b></h4><img id="tab_img" src="/static/img/snow_stab/Loose.Dry_.png"/></td>
+                <td id="tab_text">
+                <p>Release of dry unconsolidated snow. These avalanches typically occur within layers of soft snow near the surface of the snowpack. Loose-dry avalanches start at a point and entrain snow as they move downhill, forming a fan-shaped avalanche. Other names for loose-dry avalanches include point-release avalanches or sluffs. Loose-dry avalanches can trigger slab avalanches that break into deeper snow layers.
+                </p>
+                <p>
+                Loose Dry avalanches are usually relatively harmless to people. They can be hazardous if you are caught and carried into or over a terrain trap (e.g. gully, rocks, dense timber, cliff, crevasse) or down a long slope. Avoid traveling in or above terrain traps when Loose Dry avalanches are likely.
+                </p>
+                </td>
+            </tr>
+            <tr></tr>
+            <tr id="tab_row">
+                <td id="tab_tab_img"><h4><b>Wet Slab</b></h4><img id="tab_img" src="/static/img/snow_stab/Wet.Slabs_.png"/></td>
+                <td id="tab_text">
+                <p>Release of a cohesive layer of snow (a slab) that is generally moist or wet when the flow of liquid water weakens the bond between the slab and the surface below (snow or ground). They often occur during prolonged warming events and/or rain-on-snow events. Wet Slabs can be very destructive.
+                </p>
+                <p>
+                Avoid terrain where and when you suspect Wet Slab avalanche activity. Give yourself a wide safety buffer to handle the uncertainty.
+                </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+{% endblock sub_content %}

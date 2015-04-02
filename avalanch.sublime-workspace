@@ -1,0 +1,831 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fo",
+				"font-style"
+			],
+			[
+				"u",
+				"ul	Tag"
+			],
+			[
+				"avala",
+				"avalanche_home"
+			],
+			[
+				"stude",
+				"student_group"
+			],
+			[
+				"vi",
+				"Visiting"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "avalanche_ua/settings.py",
+			"settings":
+			{
+				"buffer_size": 2405,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "avalanche_ua/context_processors.py",
+			"settings":
+			{
+				"buffer_size": 96,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "avalanche/views/avalanche_home.py",
+			"settings":
+			{
+				"buffer_size": 177,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "avalanche_ua/templates/avalanche/base.html",
+			"settings":
+			{
+				"buffer_size": 7143,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "avalanche_ua/templates/avalanche/activity.html",
+			"settings":
+			{
+				"buffer_size": 4371,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "avalanche_ua/templates/avalanche/avalanche_home.html",
+			"settings":
+			{
+				"buffer_size": 2290,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "avalanche_ua/templates/avalanche/text_retport.html",
+			"settings":
+			{
+				"buffer_size": 1977,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "{% extends \"avalanche/avalanche_home.html\" %}\n{% load static from staticfiles %}\n\n{% block sub_content %}\n    <div id=\"map-canvas\"></div>\n{% endblock sub_content %}\n\n{% block map_js %}\n    <script type=\"text/javascript\" src=\"http://maps.google.com/maps/api/js?sensor=false\"></script>\n        <script>              \n            function initialize() {     \n                var myLatlng = new google.maps.LatLng(48.4119842,24.0316965);\n                var myOptions = {\n                    zoom: 8,\n                    center: myLatlng,\n                    mapTypeId: google.maps.MapTypeId.ROADMAP\n                }\n                var map = new google.maps.Map(document.getElementById(\"map_canvas\"), myOptions); \n\n\n            }           \n        </script>        \n{% endblock map_js %}                    ",
+			"file": "avalanche_ua/templates/avalanche/map.html",
+			"file_size": 836,
+			"file_write_time": 130724844527839707,
+			"settings":
+			{
+				"buffer_size": 806,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "avalanche_ua/templates/avalanche/text.html",
+			"settings":
+			{
+				"buffer_size": 392,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "avalanche/views/text_report.py",
+			"settings":
+			{
+				"buffer_size": 175,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "avalanche_ua/static/css/main1.css",
+			"settings":
+			{
+				"buffer_size": 3461,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "avalanche_ua/templates/avalanche/map.js",
+			"settings":
+			{
+				"buffer_size": 2176,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "avalanche/views/activity.py",
+			"settings":
+			{
+				"buffer_size": 176,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "avalanche_ua/urls.py",
+			"settings":
+			{
+				"buffer_size": 453,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "                <div class=\"well\">\n                  <h4>Get Avalanche Reports</h4>\n                  <p>Click on the area links above or select an icon on the map to the left.</p>\n                  <h4>Weather Forecasts</h4>\n                  <ul>\n                    <li><a href=\"http://www.metoffice.gov.uk/loutdoor/mountainsafety/\" target=\"_blank\">Met Office Mountain Forecasts</a></li>\n                    <li><a href=\"http://www.mwis.org.uk/\" target=\"_blank\">Mountain Weather Information Service (MWIS)</a></li>\n                  </ul>\n                  <h4>Report an Avalanche</h4>\n                  <ul>\n                    <li>Please report any avalanche activity you spot in the hills. <a href=\"http://www.sais.gov.uk/report_avalanche/\">Report an avalanche</a></li>\n                  </ul>\n                  <h4>Avalanche Safety</h4>\n                  <ul>\n                    <li><a href=\"http://beaware.sais.gov.uk/\">Click here to learn about avalanche safety</a></li>\n                  </ul>\n                  <h4>Your Feedback</h4>\n                  <ul>\n                    <li>If you have any comments on our service including how we display report information then please <a class=\"feedback-trigger\" href=\"mailto:co-ordinator@sais.gov.uk\">let us know your feedback.</a></li>\n                  </ul>\n                </div>\n\n\n\n\n                <div class=\"row\" id=\"homepagefeatures\">\n                  <div class=\"col-sm-4\"><a href=\"http://www.sais.gov.uk/sais-annual-reports/\" class=\"feat\">View our Annual Reports</a></div>\n                  <div class=\"col-sm-4\"><a href=\"http://www.sais.gov.uk/how-to-interpret-avalanche-reports/\" class=\"feat\">How to interpret reports</a></div>\n                  <div class=\"col-sm-4\"><a target=\"_blank\" href=\"http://beaware.sais.gov.uk/\" class=\"feat\">Be Avalanche Aware</a></div>\n                </div>\n\n\n\n\n                    \n",
+			"settings":
+			{
+				"buffer_size": 1881,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "avalanche_ua/templates/avalanche/map_test.html",
+			"settings":
+			{
+				"buffer_size": 2676,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"Package Control: Install Package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/data/work/virtualenvs/avalanche_ua/src/avalanche_ua/avalanche_ua/templates/avalanche/main1.css",
+		"/data/work/virtualenvs/avalanche_ua/src/avalanche_ua/avalanche_ua/__init__.py",
+		"/data/work/virtualenvs/avalanche_ua/src/avalanche_ua/avalanche/views.py",
+		"/data/work/virtualenvs/avalanche_ua/src/avalanche_ua/avalanche/views/home.py",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/studentdb/db.py",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/students/views/students_add.py",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/students/models/students.py",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/students/models.py",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/students/models/groups.py",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/students/models/groups_model.py",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/students/models/students_model.py",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/studentdb/gitignore_global",
+		"/home/neon/Dropbox/!Pyton/Django_Recommended_10/Code/chapter7_models/studentsdb/settings.py",
+		"/home/neon/Dropbox/avalanche.ua/index.html",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/students/views/groups.py",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/students/views/students.py",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/students/views/journal.py",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/studentdb/urls.py",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/students/admin.py",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/studentdb/settings.py",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/students/templates/students/base.html",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/students/templates/students/journal.html",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/students/templates/students/groups_list.html",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/students/templates/students/students_list.html",
+		"/media/neon/ACER/Dropbox/!Pyton/Django_Recommended_10/Code/chapter6_tmpl_views_urls/studentsdb/urls.py",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/studentdb/context_processors.py",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/students/views/visiting.py",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/students/templates/students/#visiting.html",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/students/templates/students/visiting.html",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/students/views.py",
+		"/media/neon/ACER/Dropbox/!Pyton/Django_Recommended_10/Code/chapter6_tmpl_views_urls/studentsdb/context_processors.py",
+		"/media/neon/ACER/Dropbox/!Pyton/Django_Recommended_10/Code/chapter6_tmpl_views_urls/students/templates/students/base.html",
+		"/media/neon/ACER/Dropbox/!Pyton/Django_Recommended_10/Code/chapter6_tmpl_views_urls/students/templates/students/groups_list.html",
+		"/media/neon/ACER/Dropbox/!Pyton/Django_Recommended_10/Code/chapter6_tmpl_views_urls/students/views/groups.py",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/students/templates/students/group_listing.html",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/students/templates/students/groups.html",
+		"/media/neon/ACER/Dropbox/!Pyton/Django_Recommended_10/Code/chapter6_tmpl_views_urls/students/views/students.py",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/students/static/base.html",
+		"/home/neon/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/media/neon/ACER/Dropbox/Chemistry Results/#PhD_Thesis/Latex/samplefile.tex",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/students/templates/students_list.html",
+		"/data/work/virtualenvs/studentsdb/src/studentdb/students/students_list.html"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"style.css",
+			"img",
+			"UpdateView",
+			"template"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 7,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "avalanche_ua/settings.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2405,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2405,
+								2405
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 1065.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "avalanche_ua/context_processors.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 96,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								63,
+								63
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "avalanche/views/avalanche_home.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 177,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								166,
+								166
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "avalanche_ua/templates/avalanche/base.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7143,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7069,
+								7069
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1800.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "avalanche_ua/templates/avalanche/activity.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4371,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3554,
+								3554
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 675.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "avalanche_ua/templates/avalanche/avalanche_home.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2290,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "avalanche_ua/templates/avalanche/text_retport.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1977,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								623,
+								623
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "avalanche_ua/templates/avalanche/map.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 806,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								713,
+								713
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "avalanche_ua/templates/avalanche/text.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 392,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								336,
+								336
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "avalanche/views/text_report.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 175,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								175,
+								175
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "avalanche_ua/static/css/main1.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3461,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "avalanche_ua/templates/avalanche/map.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2176,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2176,
+								2176
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "avalanche/views/activity.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 176,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								111,
+								111
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "avalanche_ua/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 453,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								344,
+								344
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1881,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1880,
+								1880
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 153.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "avalanche_ua/templates/avalanche/map_test.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2676,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								507,
+								507
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 100.0
+	},
+	"project": "avalanch.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

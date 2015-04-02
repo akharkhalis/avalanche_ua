@@ -1,0 +1,39 @@
+{% load static from staticfiles %}
+{% extends "avalanche/base.html" %}
+{% block meta_title %}Text Report{% endblock meta_title %}
+{% block title %}Лавинна Інформація для Українських Карпат{% endblock title %}
+
+{% block content %}
+
+            <div class="row">
+                <div class="col-xs-8">
+                    <ul class="nav nav-tabs">
+                      <li role="presentation" id="content" class="active"><a href="{%url "home"%}">Лавинний прогноз у вигляді карти</a></li>
+                      <li role="presentation" id="content" ><a href= "{% url "textreport" %}">Лавинний прогноз у вигляді тексту</a></li>
+                    </ul>
+                    <div id="text_report">
+                        
+                    </div>
+                </div>
+            
+                <div class="col-xs-4" >
+                    <div >
+                        <ul class="nav nav-tabs">
+                            <li role="presentation" id="content" class="active"><a href="#">Новини</a></li>
+                        </ul> 
+                        <div class="content"></div>
+                    </div> 
+                    <div>
+                        <ul class="nav nav-tabs" style="padding-left: 0px">
+                            <li role="presentation" id="content" class="active"><a href="#">Лавинна активність</a></li>
+                            <li role="presentation" id="content"><a href="#">більше...</a></li>
+                        </ul>
+                        <ul style="padding-left: 0px">    
+                            <li class="list-group-item">24 години: <a href="#">0 лавин</a></li>
+                            <li class="list-group-item">Місяць: <a href="#">63 лавин</a></li>
+                            <li class="list-group-item">Поточний сезон(14/15): <a href="#">351 лавин</a></li>                           
+                        </ul>
+                    </div>    
+                </div>
+            </div>
+{% endblock content %}

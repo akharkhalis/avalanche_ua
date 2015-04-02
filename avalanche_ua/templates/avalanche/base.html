@@ -1,0 +1,149 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CCAIS {% block meta_title %}{% endblock meta_title %}</title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ PORTAL_URL }}{% static "css/main1.css" %}">
+        {% block extra_css %}{% endblock extra_css %}
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+            <div class="col-xs-9" id="header">
+                <img id="mainlogo" src="/static/img/nwac.jpg"/>
+            </div>
+            <div class="row">
+            <div class="col-xs-3" id="header_btn">
+                <button type="button" class="btn" autocomplete="off">
+                    Повідомити про Лавину 
+                </button>
+            </div>
+
+
+
+<!--Header Navigation-->
+            <div class="row">
+                <div class="col-xs-12" id="mainheader">
+
+                    <header id="mainheader" class="navbar navbar-default container-fluid navbar-static-top">
+
+                        <div class="limit">
+                            <nav id="mainnav" role="navigation" class="collapse navbar-collapse">
+                                <ul class="nav navbar-nav navbar-left">
+                                    <li class="page_item page-item-2 current_page_item">
+                                        <a href= "{% url "home" %}"> 
+                                            <span class="glyphicon glyphicon-home"></span>
+                                        </a>
+                                    </li>
+                                    <li class="page_item page-item-6">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Локації <span class="caret"></span></a>
+                                          <ul class="dropdown-menu" role="menu" id="mainheader">
+                                            <li><a href="#">Боржава</a></li>
+                                            <li><a href="#">Свидовець</a></li>
+                                            <li><a href="#">Чорногора</a></li>
+                                          </ul>     
+                                    </li>
+                                    <li class="page_item page-item-7"><a href="#">Навчання</a></li>
+                                    <li class="page_item page-item-8">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Лавинна Активнсіть 
+                                        <span class="caret"></span></a>
+                                            <ul class="dropdown-menu" role="menu" id="mainheader">
+                                            <li><a href="{% url "activity" %}">48 годин  <span class="badge">0</span></a></li>
+                                            <li><a href="{% url "activity" %}">Тиджень  <span class="badge">12</span></a></li>
+                                            <li><a href="{% url "activity" %}">Місяць  <span class="badge">20</span></a></li>
+                                            <li><a href="{% url "activity" %}">Поточний сезон  <span class="badge">134</span></a></li>
+                                            <li><a href="{% url "activity" %}">Вся історія  <span class="badge">1143</span></a></li>
+                                            </ul>  
+                                    </li>
+                                    <li class="page_item page-item-6">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Прогноз погоди<span class="caret"></span></a>
+                                          <ul class="dropdown-menu" role="menu" id="mainheader">
+                                            <li><a href="#">Боржава</a></li>
+                                            <li><a href="#">Свидовець</a></li>
+                                            <li><a href="#">Чорногора</a></li>
+                                          </ul>     
+                                    </li> 
+                                </ul>
+                                
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li ><a href="#">Email alerts</a></li>                
+                                    <li ><a href="#">Про нас</a></li>
+                                    <li ><a href="#">Допомогти проекту</a></li>
+                                </ul>
+                            </nav>
+                                
+                        </div>
+                    </header>
+                </div>  
+            </div>
+
+<!--Content Map-->      
+            <div class="row">
+                <div class="col-xs-12" id="content_title">
+                    <h3>{% block title %}{% endblock title %}</h3>
+                </div>
+            </div>    
+            {% block content %}{% endblock content %}
+            
+<!--Footer-->
+
+        <div class="row" id="footer">
+ <!--Contact Us--> 
+            <div class="col-xs-2">
+                <div class="row" id="footer">Наші контакти</div>
+                <ul id="footer"><a href="mailto:snow@CAIS.UA">email us</a></ul>
+            </div>
+
+            <div class="col-xs-1"></div>
+ <!--Follow Us-->             
+            <div class="col-xs-2"> 
+                
+                <div class="row" id="footer">Ми в соцмережах</div>
+                <ul id="footer">Twitter</ul>
+                <ul id="footer">facebook</ul>
+                <ul id="footer"> <span class="social social-youtube"></span>Youtube</ul>
+                
+            </div>
+            <div class="col-xs-1"></div>
+<!--Partnership-->
+            <div class="col-xs-2">
+                <div class="row" id="footer">Наші партнери</div>
+                <ul id="footer">Armada Ukraine</ul>
+                <ul id="footer">Alpine Initiatives</ul>
+                <ul id="footer">extreme.com.ua</ul>
+                <UL id="footer">mns.gov.ua</UL>
+            </div>
+            <div class="col-xs-1"></div>
+<!--Usefull Links-->
+            <div class="col-xs-3">
+                <div class="row" id="footer">Наші партнери</div>
+                <ul id="footer">extreme.com.ua</ul>
+                <UL id="footer">mns.gov.ua</UL>
+            </div>
+            </div>
+        </div>  
+ <!--Admin LogIn--> 
+        <div class="row" id="admin">
+            <div class="col-xs-10">
+                © 2015 Carpatian Avalanche Information Service
+            </div>
+            <div class="col-xs-2" id="admin_login">
+                <a href="#">Admin LogIn</a>
+            </div>
+        </div>  
+
+
+
+<!--JavaScripts-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        {% block extra_js %}{% endblock extra_js %}
+        
+    </body>
+</html>
+
