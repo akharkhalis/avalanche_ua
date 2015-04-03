@@ -50,11 +50,10 @@ class activity_db(models.Model):
         default='')
 
 
-   # zone = models.ForeignKey('Group',
-   #     verbose_name=u"Група",
-   #     blank=False,
-   #     null=True,
-   #     on_delete=models.PROTECT)
+    location = models.ForeignKey('location',
+        verbose_name=u"Район",
+        blank=False,
+        null=True,)
 
     notes = models.TextField(
         blank=True,
@@ -84,4 +83,4 @@ class activity_db(models.Model):
         verbose_name=u"Емейл")
 
     def __unicode__(self):
-        return u"%s %s" % (self.date, self.obs_last_name)
+        return u"%s %s %s" % (self.date, self.time, self.obs_last_name)

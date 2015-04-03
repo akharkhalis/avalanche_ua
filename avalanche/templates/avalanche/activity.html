@@ -30,26 +30,28 @@
                         <thead>
                             <tr>
                                 <th># </th>
+                                <th>Дата</th>
                                 <th>Район</th>
                                 <th>Координати</th>
                                 <th>Напрямленість</th>
                                 <th>Тип</th>
-                                <th>Дата</th>
                                 <th>Причина(потерпілі)</th>
+                                <th></th>
                             </tr>
                         <thead>
                         <tbody>
-                            {% for activity in activity_db %}
+                            {% for activity in activity %}
                             <tr>
-                                <td>-</td>
-                                <td>{% activity_db.coordinat_x %}, {% activity_db.coordinat_y %}</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>1</td>
-                                <td>{% activity_db.date %} - {% activity_db.time %}</td>
-                                <td>-({% activity_db.victims %})</td>
+                                <td>{{activity.id}}</td>
+                                <td>{{activity.date}} , {{activity.time}} </td>
+                                <td>{{activity.location_title}}</td>
+                                <td>{{activity.coordinat_x}}, {{activity.coordinat_y}}</td>
+                                <td>{{activity.aspect}}</td>
+                                <td>{{activity.a_type}}</td>
+                                <td>{{activity.triger}}({{activity.victims}})</td>
+                                <td><a href="#">більше...</a></td>
                             </tr>
-                            {%andfor%}
+                            {%endfor%}
                         </tbody>
                     </table>
         
