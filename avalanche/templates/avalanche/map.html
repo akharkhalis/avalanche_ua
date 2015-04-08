@@ -7,16 +7,115 @@
 
 {% block map_js %}
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
-                    <script>
-                      function initialize() {
-                        var mapCanvas = document.getElementById('map-canvas');
-                        var mapOptions = {
-                          center: new google.maps.LatLng(48.4119842,24.0316965),
-                          zoom: 8,
-                          mapTypeId: google.maps.MapTypeId.ROADMAP
-                        }
-                        var map = new google.maps.Map(mapCanvas, mapOptions)
-                      }
-                      google.maps.event.addDomListener(window, 'load', initialize);
-        </script>     
+    <script>
+// The following example creates complex markers to indicate beaches near
+// Sydney, NSW, Australia. Note that the anchor is set to
+// (0,32) to correspond to the base of the flagpole.
+
+function initialize() {
+  var mapOptions = {
+    zoom: 8,
+    center: new google.maps.LatLng(48.4119842,24.0316965)
+  }
+  var map = new google.maps.Map(document.getElementById('map-canvas'),
+                                mapOptions);
+
+  setMarkers(map, beaches);
+}
+
+/**
+ * Data for the markers consisting of a name, a LatLng and a zIndex for
+ * the order in which these markers should display on top of each
+ * other.
+ */
+var beaches = [
+    ['DRAG', 48.243425, 24.227549, 5],
+    ['MARMAROSY', 47.968204, 24.560426, 1],
+    ['PDB', 48.641246, 23.243624, 8],
+];
+
+var beaches2 =[
+  ['MARMAROSY', 47.968204, 24.560426, 1],
+];
+
+var beaches3 =[
+  ['PDB', 48.641246, 23.243624, 8],
+];
+
+function setMarkers(map, locations) {
+  // Add markers to the map
+
+  // Marker sizes are expressed as a Size of X,Y
+  // where the origin of the image (0,0) is located
+  // in the top left of the image.
+
+  // Origins, anchor positions and coordinates of the marker
+  // increase in the X direction to the right and in
+  // the Y direction down.
+var image1 = {
+    url: '{{PORTAL_URL}} {% static "img/1.png"%}',
+    // This marker is 20 pixels wide by 32 pixels tall.
+    size: new google.maps.Size(84, 71),
+    // The origin for this image is 0,0.
+    origin: new google.maps.Point(0,0),
+    // The anchor for this image is the base of the flagpole at 0,32.
+    anchor: new google.maps.Point(41,71)
+  };
+  var image2 = {
+    url: '{{PORTAL_URL}} {% static "img/2.png"%}',
+    // This marker is 20 pixels wide by 32 pixels tall.
+    size: new google.maps.Size(84, 71),
+    // The origin for this image is 0,0.
+    origin: new google.maps.Point(0,0),
+    // The anchor for this image is the base of the flagpole at 0,32.
+    anchor: new google.maps.Point(41,71)
+  };
+   var image3 = {
+    url: '{{PORTAL_URL}} {% static "img/3.png"%}',
+    // This marker is 20 pixels wide by 32 pixels tall.
+    size: new google.maps.Size(84, 71),
+    // The origin for this image is 0,0.
+    origin: new google.maps.Point(0,0),
+    // The anchor for this image is the base of the flagpole at 0,32.
+    anchor: new google.maps.Point(41,71)
+  }; 
+  // Shapes define the clickable region of the icon.
+  // The type defines an HTML &lt;area&gt; element 'poly' which
+  // traces out a polygon as a series of X,Y points. The final
+  // coordinate closes the poly by connecting to the first
+  // coordinate.
+  var shape = {
+      coords: [1, 1, 1, 20, 18, 20, 18 , 1],
+      type: 'poly'
+  };
+  for (var i = 0; i < locations.length; i++) {
+    var beach = locations[i];
+    var myLatLng = new google.maps.LatLng(beach[1], beach[2]);
+    var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        icon: image3,
+        shape: shape,
+        title: beach[0],
+        zIndex: beach[3]
+    });
+  }
+
+  for (var i = 0; i < locations.length; i++) {
+    var beach2 = locations[i];
+    var myLatLng = new google.maps.LatLng(beach2[1], beach2[2]);
+    var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        icon: image3,
+        shape: shape,
+        title: beach2[0],
+        zIndex: beach2[3]
+    });
+  }
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>  
 {% endblock map_js %}   

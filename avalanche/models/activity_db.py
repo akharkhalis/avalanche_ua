@@ -62,13 +62,13 @@ class activity_db(models.Model):
         )
 
     a_type = models.ForeignKey('aval_type',
-        verbose_name=u"Напрям",
+        verbose_name=u"Тип",
         blank=True,
         null=True
         )
 
     triger = models.ForeignKey('triger',
-        verbose_name=u"Напрям",
+        verbose_name=u"Причина",
         blank=True,
         null=True
         )

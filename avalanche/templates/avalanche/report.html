@@ -36,72 +36,27 @@
                     </div>    
                 </div>
             </div>
-
+{% endblock content %}
 <!--Footer-->
 
-        <div class="row" id="footer">
- <!--Contact Us--> 
-            <div class="col-xs-2">
-                <div class="row" id="footer">Наші контакти</div>
-                <ul id="footer"><a href="mailto:snow@CAIS.UA">email us</a></ul>
-            </div>
-
-            <div class="col-xs-1"></div>
- <!--Follow Us-->             
-            <div class="col-xs-2"> 
-                
-                <div class="row" id="footer">Ми в соцмережах</div>
-                <ul id="footer">Twitter</ul>
-                <ul id="footer">facebook</ul>
-                <ul id="footer"> <span class="social social-youtube"></span>Youtube</ul>
-                
-            </div>
-            <div class="col-xs-1"></div>
-<!--Partnership-->
-            <div class="col-xs-2">
-                <div class="row" id="footer">Наші партнери</div>
-                <ul id="footer">Armada Ukraine</ul>
-                <ul id="footer">Alpine Initiatives</ul>
-                <ul id="footer">extreme.com.ua</ul>
-                <UL id="footer">mns.gov.ua</UL>
-            </div>
-            <div class="col-xs-1"></div>
-<!--Usefull Links-->
-            <div class="col-xs-3">
-                <div class="row" id="footer">Наші партнери</div>
-                <ul id="footer">extreme.com.ua</ul>
-                <UL id="footer">mns.gov.ua</UL>
-            </div>
-            </div>
-        </div>  
- <!--Admin LogIn--> 
-        <div class="row" id="admin">
-            <div class="col-xs-10">
-                © 2015 Carpatian Avalanche Information Service
-            </div>
-            <div class="col-xs-2" id="admin_login">
-                <a href="#">Admin LogIn</a>
-            </div>
-        </div>  
+     {% block extra_js %}
 
 
-
-<!--JavaScripts-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
                     <script>
-                      function initialize() {
-                        var mapCanvas = document.getElementById('map-canvas');
-                        var mapOptions = {
-                          center: new google.maps.LatLng(48.4119842,24.0316965),
-                          zoom: 8,
-                          mapTypeId: google.maps.MapTypeId.ROADMAP
-                        }
-                        var map = new google.maps.Map(mapCanvas, mapOptions)
-                      }
-                      google.maps.event.addDomListener(window, 'load', initialize);
-                    </script>        
+                        function initialize() {
+                          var myLatlng = new google.maps.LatLng(48.4119842,24.0316965);
+                          var mapOptions = {
+                            zoom: 8,
+                            center: myLatlng
+                          }
+                          var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-    </body>
-</html>
+                          var marker = new google.maps.Marker({
+                              position: myLatlng,
+                              map: map,
+                              title: 'Hello World!'
+                          });
+                        }
+                    </script>        
+    {% endblock extra_js %}

@@ -9,6 +9,6 @@ class triger(models.Model):
     triger = models.CharField(
         max_length=20,
         blank=False,
-        verbose_name=u"напрям")
+        verbose_name=u"Напрям")
     def __unicode__(self):
         return u"%s" % (self.triger)
